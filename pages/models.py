@@ -1,7 +1,7 @@
 from django.db import models
 from ckeditor.fields import RichTextField
 
-# Create your models here.p
+# Create your models here.
 class Page(models.Model):
     title = models.CharField(verbose_name="Título", max_length=200)
     content = RichTextField(verbose_name="Contenido")
