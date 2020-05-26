@@ -33,3 +33,5 @@ def contact(request):
                 return redirect(reverse('contact')+"?fail")
     
     return render(request, "contact/contact.html",{'form':contact_form})
+
+    
