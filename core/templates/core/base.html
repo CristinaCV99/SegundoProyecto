@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>{% block title %}{% endblock %} | La Caffettiera</title>
+    <title>{% block title %}{% endblock %} | Aranda</title>
 
     {% load static %}
 
@@ -28,14 +28,14 @@
   <body>
 
     <h1 class="site-heading text-center text-white d-none d-lg-block">
-      <span class="site-heading-upper text-primary mb-3">L'autentico caffè d'italia</span>
-      <span class="site-heading-lower">La Caffettiera</span>
+      <span class="site-heading-upper text-primary mb-3"></span>
+      <span class="site-heading-lower">ARANDA AMOBLAMIENTOS</span>
     </h1>
 
     <!-- Navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
       <div class="container">
-        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="{% url 'home' %}">La Caffettiera</a>
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="{% url 'home' %}">Aranda Amoblamientos</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -56,20 +56,22 @@
             <li class="nav-item px-lg-4 {% if request.path == '/contact/' %}active{% endif %}">
               <a class="nav-link text-uppercase text-expanded" href="{% url 'contact' %}">Contacto</a>
             </li>
-            <li class="nav-item px-lg-4 {% if request.path|slice:":6" == '/blog/' %}active{% endif %}">
+              <li class="nav-item px-lg-4 {% if request.path == '/contact/' %}active{% endif %}">
               <a class="nav-link text-uppercase text-expanded" href="{% url 'blog' %}">Blog</a>
             </li>
+            
           </ul>
         </div>
       </div>
     </nav>
 
     {% block content %} {% endblock %}
+   
 
     <!-- Pié de página -->
     <footer class="footer text-faded text-center py-5">
       <div class="container">
-        <p class="m-0">
+        <p class="m-0"> 
           {% if LINK_TWITTER %}
             <a href="{{LINK_TWITTER}}" class="link">
               <span class="fa-stack fa-lg">
@@ -105,7 +107,7 @@
             <a href="{% url 'page' page.id page.title|slugify %}" class="link">{{page.title}}</a> {% if not forloop.last %}·{% endif %} 
           {% endfor %}
         </p>
-        <p class="m-0 mbt1">&copy; La Caffettiera 2018</p>
+        <p class="m-0 mbt1">&copy; Aranda Amoblamientos 2020</p>
       </div>
 	  </footer>
 
